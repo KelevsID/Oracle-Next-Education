@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alura ONE</title>
+</head>
+
+<body>
+    <h1>Mi primer programa HTML!</h1>
+    <p>Será esto un programa?</p>
+    <a href="https://app.aluracursos.com/" target="_blank" rel="Alura">aquí</a>
+    <br />
+    <br />
+    <script>
+        const date = new Date();
+        const year = date.getFullYear();
+        const person = [
+            { name: 'Juan', age: 31 },
+            { name: 'Pedro', age: 19 },
+            { name: 'Carlos', age: 35 }
+        ]
+
+        let additionAge = 0;
+        let averageAge = 0;
+
+        for (let i = 0; i < person.length; i++) {
+            document.write(`Nombre: ${person[i].name}, edad: ${person[i].age}, 
+            año de nacimiento: ${year - person[i].age} <br />`)
+            additionAge = additionAge + person[i].age
+        }
+        averageAge = additionAge / person.length
+        document.write(`La edad promedio es ${Math.round(averageAge)} <br />`)
+        document.write(`<br />`)
+        
+        let number = 5;
+        for (let k = 1; k <= 10; k++) {
+            document.write(`Tabla ${number} x ${k} = ${k*number} <br />`)
+        }
+    </script>
+</body>
+
+</html>
