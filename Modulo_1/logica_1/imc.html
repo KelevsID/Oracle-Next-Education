@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>IMC</title>
 </head>
 
 <body>
@@ -15,7 +15,7 @@
         let sum = 0, average = 0, count = 0, weight = 0, height = 0;
 
         function jumpLine() {
-            document.write(br.repeat(3));
+            document.write(br.repeat(2));
         }
 
         function toPrint(text) {
@@ -43,11 +43,21 @@
         count = prompt("Ingrese el número de personas a calcular su IMC")
         for (let j = 1; j <= count; j++) {
             name = prompt(`Persona # ${j} Ingrese su nombre`);
-            weight = prompt(`${name}, Ingrese su peso`);
-            height = prompt(`${name}, Ingrese su altura`);
+            weight = parseInt(prompt(`${name}, Ingrese su peso`));
+            height = parseInt(prompt(`${name}, Ingrese su altura`));
 
             const personIMC = calculateBMI(name, weight, height)  // personIMC is a object {personName: "string", imc: number}, the last value entered.
-            toPrint(`El IMC de ${personIMC.personName} es: ${personIMC.imc.toFixed(2)}, su peso es: ${weight} y su estarura ${height}`)
+            toPrint(`El IMC de ${personIMC.personName} es: ${personIMC.imc.toFixed(2)}, su peso es: ${weight}Kg y su estarura ${height}Mts`)
+            if (personIMC.imc < 18.5) {
+                toPrint(`IMC inferior al normal ${personIMC.imc.toFixed(2)}`)
+            }else if(personIMC.imc >= 18.5 && personIMC.imc < 25){
+                toPrint(`IMC normal ${personIMC.imc.toFixed(2)}`)
+            }else if(personIMC.imc >= 25 && personIMC.imc < 30){
+                toPrint(`IMC superior al normal ${personIMC.imc.toFixed(2)}`)
+            }else {
+                toPrint(`IMC Obesidad ${personIMC.imc.toFixed(2)}`)
+            }
+            toPrint("######################################");
         }
         average = arraySum(myArray).toFixed(2);
         toPrint(`Promedio de IMC ${average}`)
