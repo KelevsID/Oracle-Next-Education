@@ -10,9 +10,9 @@
 <body>
     <h1>Calcular IMC</h1>
     <script>
-        let br = "<br />"
+        let br = "<br />", name = "";
         let myArray = [];
-        let sum = 0;
+        let sum = 0, average = 0, count = 0, weight = 0, height = 0;
 
         function jumpLine() {
             document.write(br.repeat(3));
@@ -22,31 +22,36 @@
             document.write(text);
             jumpLine();
         }
-        
-        function calculateBMI(name, weight, height) {
+
+        function calculateBMI(personName, weight, height) {
             let imc = weight / Math.pow(height, 2);
             myArray.push(imc)
-            return { name, imc }  // return object {name: "string", imc: number}
+            return { personName, imc }  // return object {personName: "string", imc: number}
         }
 
+        /*
+            this function is done to loop through an array and get an average of that same array,
+            when there is more than one person whose BMI is calculated. 
+        */
         function arraySum(array) {
-            summary = "resumen en español"
             for (let i = 0; i < array.length; i++) {
                 sum = sum + array[i]
             }
             return sum / array.length;
         }
 
-        let imc1 = calculateBMI("Chistian", 71, 1.72);
-        let imc2 = calculateBMI("Felipe", 75, 1.73);
-        let imc3 = calculateBMI("Gabriela", 65, 1.68);
-        let imc4 = calculateBMI("Luisa", 55, 1.60);
-        let average = (imc1.imc + imc2.imc) / 2;
+        count = prompt("Ingrese el número de personas a calcular su IMC")
+        for (let j = 1; j <= count; j++) {
+            name = prompt(`Persona # ${j} Ingrese su nombre`);
+            weight = prompt(`${name}, Ingrese su peso`);
+            height = prompt(`${name}, Ingrese su altura`);
 
-        toPrint(`El promedio de IMC de ${imc1.name} y ${imc2.name} es ${average.toFixed(2)}`);
-        toPrint(`El promedio de IMC de ${imc3.name} y ${imc4.name} es ${((imc3.imc + imc4.imc) / 2).toFixed(2)}`);
-        toPrint(`Promedio de IMC ${arraySum(myArray).toFixed(2)}`)
-   </script>
+            const personIMC = calculateBMI(name, weight, height)  // personIMC is a object {personName: "string", imc: number}, the last value entered.
+            toPrint(`El IMC de ${personIMC.personName} es: ${personIMC.imc.toFixed(2)}, su peso es: ${weight} y su estarura ${height}`)
+        }
+        average = arraySum(myArray).toFixed(2);
+        toPrint(`Promedio de IMC ${average}`)
+    </script>
 </body>
 
 </html>
