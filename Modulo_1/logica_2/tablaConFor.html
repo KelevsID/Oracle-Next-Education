@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loop - for</title>
+</head>
+
+<body>
+    <h1>Tabla Multiplicar</h1>
+    <script>
+        let br = "<br />";
+        let year = 0;
+
+        function jumpLine() {
+            document.write(br.repeat(1));
+        }
+
+        function toPrint(text) {
+            document.write(text);
+            jumpLine();
+        }
+
+        let a = parseInt(prompt("que tabla quiere: "))
+
+        if (Number(a)) {
+            toPrint(`Tabla del ${a}`)
+            for (let i = 1; i <= 10; i++) {
+                toPrint(`${a} x ${i} = ${a * i}`)
+            }
+        } else {
+            for (let i = 1; i <= 10; i++) {
+                toPrint(`Tabla del: ${i}`)
+                for (let j = 1; j <= 10; j++) {
+                    toPrint(`${i} x ${j} = ${i * j}`)
+                }
+                jumpLine()
+            }
+        }
+
+    </script>
+</body>
+
+</html>
