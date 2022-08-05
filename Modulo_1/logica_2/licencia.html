@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Licencia de conducción</title>
+</head>
+<body>
+    <script>
+        let br = "<br />";
+        let age = 0, driverLicense = "";
+
+        function jumpLine() {
+            document.write(br.repeat(2));
+        }
+
+        function toPrint(text) {
+            document.write(text);
+            jumpLine();
+        }
+
+        age = parseInt(prompt("Ingrese su edad"));
+        driverLicense = prompt("¿Tienes licencia? S o N").toUpperCase();
+
+        if (driverLicense != "S" && driverLicense != "N"){
+            toPrint("Ingrese datos validos 'S' o 'N'");
+        }else {
+            if(age >= 18 && driverLicense == "S") {
+                toPrint("Puedes conducir");
+            }
+            else {
+                toPrint("No puedes conducir");
+            }
+        }
+    
+    </script>
+</body>
+</html>
+
