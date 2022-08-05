@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adivina</title>
+</head>
+
+<body>
+    <h1>Adivina el Número</h1>
+    <script>
+        let br = "<br />";
+        let numberRandom = 0, numberInput = 0, chance = 0;
+
+        function jumpLine() {
+            document.write(br.repeat(2));
+        }
+
+        function toPrint(text) {
+            document.write(text);
+            jumpLine();
+        }
+
+        function random(min, max) {
+            let result = Math.floor(Math.random() * (max - min + 1)) + min;
+            return result;
+        }
+
+        numberRandom = random(1, 10);
+
+        function repeat() {
+            chance = parseInt(prompt("Ingrese cuantos intentos desea"));
+            for (let i = 1; i <= chance; i++) {
+                numberInput = parseInt(prompt(`Ingrese el número del 1 al 10, Intento # ${i} `));
+
+                if (Number(numberInput) && numberInput > 0 && numberInput <= 10) {
+                    if (numberRandom == numberInput) {
+                        toPrint(`El número ingresado ${numberInput} es el correcto`);
+                        break;
+                    } else {
+                        // toPrint(`El número era ${numberRandom}`);
+                        if (numberRandom > numberInput) {
+                            toPrint(`El número ingresado es menor ${numberInput} < ${numberRandom}`)
+                        } else {
+                            toPrint(`El número ingresado es mayor ${numberInput} > ${numberRandom}`)
+                        }
+                    }
+                } else {
+                    alert("Ingrese un número valido del 1 al 10");
+                    repeat();
+                    break;
+                }
+            }
+        }
+        repeat();
+    </script>
+
+</body>
+
+</html>
