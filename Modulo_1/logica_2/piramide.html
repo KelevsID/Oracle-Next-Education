@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ciclo anidado</title>
+</head>
+
+<body>
+    <h1>Piramide</h1>
+    <script>
+        let br = "<br />";
+
+        function jumpLine() {
+            document.write(br.repeat(1));
+        }
+
+        function toPrint(text) {
+            document.write(text);
+            jumpLine();
+        }
+
+        for (let i = 1; i < 6; i++) {
+            for (let j = 0; j < i; j++) {
+                document.write(("* "))
+            }  
+            jumpLine();        
+        }
+    </script>
+
+</body>
+
+</html>
