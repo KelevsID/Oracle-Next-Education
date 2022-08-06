@@ -1,0 +1,29 @@
+<meta charset="UTF-8">
+
+<script>
+
+    var id = "alura";
+    var password = "alura321";
+
+    var maxTry = 3;
+    var currentTry = 1;
+
+    while (currentTry <= maxTry) {
+        var idLogin = prompt("Ingrese su usuario");
+        var passwordLogin = prompt("Ingrese su contraseña");
+
+        if (id == idLogin && password == passwordLogin) {
+            alert("Bienvenido al sistema" + idLogin);
+            // currentTry = maxTry;
+            break;
+        } else {
+            if (currentTry < 3) {
+                alert("Contraseña errada, intente de nuevo!");
+            } else {
+                alert("Inicio de sesión inválido. Favor intente de nuevo");
+            }
+        }
+        currentTry++
+    }
+
+</script>
