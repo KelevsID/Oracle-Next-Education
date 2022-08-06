@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acumulando Variables</title>
+</head>
+
+<body>
+    <h1>Calcular edad media de las personas</h1>
+    <script>
+        let br = "<br />";
+        let ages = 0, allAges = 0, familyMembers = 0, avarageAges = 0;
+
+        function jumpLine() {
+            document.write(br.repeat(1));
+        }
+
+        function toPrint(text) {
+            document.write(text);
+            jumpLine();
+        }
+
+        familyMembers = parseInt(prompt("Numero de integrantes"))
+
+        let i = 1;
+        while (i <= familyMembers) {
+            ages = parseInt(prompt(`Edad del integrante ${i}`))
+            allAges = allAges + ages
+            i++
+        }
+
+        avarageAges = allAges / familyMembers
+        toPrint(`El promedio de edades es ${avarageAges.toFixed(2)}`)
+    </script>
+</body>
+
+</html>
