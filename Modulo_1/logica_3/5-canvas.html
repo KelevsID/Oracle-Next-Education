@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse, en cuál posición estás</title>
+</head>
+
+<body>
+    <canvas width="600" height="400"></canvas>
+    <script>
+        const tagCanva = document.querySelector("canvas")
+        const paintBrush = tagCanva.getContext("2d")
+
+        paintBrush.fillStyle = "grey"
+        paintBrush.fillRect(0, 0, 600, 400)
+
+        // tagCanva.onclick = exibirAlerta;
+        // tagCanva.addEventListener("click", exibirAlerta);  // Otra forma de agregar el evento
+
+        function exibirAlerta(event) {
+            // console.log(event);  // Ver todo el objeto del PointerEvent
+            // let posX = event.pageX - tagCanva.offsetLeft
+            // let posY = event.pageY- tagCanva.offsetTop
+            let posX = event.offsetX
+            let posY = event.offsetY
+            alert(`Usted hizo un clic en pos-x ${posX}, pos-y ${posY}`)
+        }
+
+        // tagCanva.onclick = drawCircle;
+        tagCanva.addEventListener("click", drawCircle);
+
+        function drawCircle(evento) {
+            let posX = evento.offsetX
+            let posY = evento.offsetY
+            paintBrush.fillStyle = "blue"
+            paintBrush.beginPath()
+            paintBrush.arc(posX, posY, 10, 0, 2 * 3.14)
+            paintBrush.fill()
+            console.log(`x: ${posX} | y: ${posY}`);
+        }
+
+    </script>
+</body>
+
+</html>
