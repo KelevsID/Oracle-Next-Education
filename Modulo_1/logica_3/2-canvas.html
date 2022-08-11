@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>canvas - loops</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas width="600" height="400"></canvas>
+
+    <script>
+        const tagCanva = document.querySelector("canvas");
+        const paintBrush = tagCanva.getContext("2d");
+
+        function drawXSquares(num, ancho) {
+            paintBrush.fillStyle = "orange"
+            paintBrush.strokeStyle = "black"
+
+            for (let i = 0; i < num; i++) {
+                paintBrush.fillRect(ancho * i, 350, ancho, 50)
+                paintBrush.strokeRect(ancho * i, 350, ancho, 50)
+            }
+        }
+        drawXSquares(5, 50)
+
+        function drawSquare(x, y, color) {
+
+            paintBrush.fillStyle = color
+            paintBrush.strokeStyle = "black"
+
+            paintBrush.fillRect(x, y, 50, 50)
+            paintBrush.strokeRect(x, y, 50, 50)
+
+        }
+
+        let x = 0;
+        while (x < 600) {
+            drawSquare(x, 0, "green")
+            drawSquare(x, 50, "yellow")
+            drawSquare(x, 100, "red")
+            x = x + 50
+        }
+
+        for (let i = 0; i < 600; i = i +50) {
+            drawSquare(i, 150, "blue")
+            drawSquare(i, 200, "white")
+            drawSquare(i, 250, "red")
+        }
+
+    </script>
+</body>
+
+</html>
