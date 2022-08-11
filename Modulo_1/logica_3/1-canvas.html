@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas width="600" height="400"></canvas>
+    <br>
+    <canvas id="creeper" width="600" height="400"></canvas>
+    <br>
+    <canvas id="escuadra" width="600" height="400"></canvas>
+
+    <script>
+        const tagCanva = document.querySelector("canvas");
+        const paintBrush = tagCanva.getContext("2d");
+
+        paintBrush.fillStyle = "white"  // propiedad, caracteristica 
+        paintBrush.fillRect(0, 0, 600, 400)    // función - pinta desde punto origen a lo agregado
+
+        paintBrush.fillStyle = "green"
+        paintBrush.fillRect(0, 0, 200, 400)
+
+        paintBrush.fillStyle = "red"
+        paintBrush.fillRect(400, 0, 200, 400)
+
+        paintBrush.fillStyle = "yellow"
+        paintBrush.beginPath()
+        paintBrush.moveTo(300, 200)
+        paintBrush.lineTo(200, 400)
+        paintBrush.lineTo(400, 400)
+        paintBrush.fill()
+
+        paintBrush.fillStyle = "blue"
+        paintBrush.beginPath()
+        paintBrush.arc(300, 200, 50, 0, 2 * 3.14)
+        paintBrush.fill()
+
+    </script>
+    <script>
+        const tagCanva2 = document.getElementById("creeper");
+        const paintBrush2 = tagCanva2.getContext("2d")
+
+        // Cabeza
+        paintBrush2.fillStyle = "darkgreen"
+        paintBrush2.fillRect(125, 50, 350, 300)
+
+        // Ojos
+        paintBrush2.fillStyle = "black"
+        paintBrush2.fillRect(175, 110, 90, 90);
+        paintBrush2.fillRect(335, 110, 90, 90);
+
+        // Nariz
+        paintBrush2.fillRect(265, 200, 70, 100);
+
+        // Boca
+        paintBrush2.fillRect(225, 240, 40, 110);
+        paintBrush2.fillRect(335, 240, 40, 110);
+    </script>
+
+    <script>
+        const tagCanva3 = document.getElementById("escuadra");
+        const paintBrush3 = tagCanva3.getContext("2d")
+
+        paintBrush3.fillStyle = "black"
+        paintBrush3.beginPath()
+        paintBrush3.moveTo(50, 50)
+        paintBrush3.lineTo(50, 350)
+        paintBrush3.lineTo(350, 350)
+        paintBrush3.fill()
+
+        paintBrush3.fillStyle = "white"
+        paintBrush3.beginPath()
+        paintBrush3.moveTo(90, 150)
+        paintBrush3.lineTo(90, 310)
+        paintBrush3.lineTo(250, 310)
+        paintBrush3.fill()
+    </script>
+</body>
+
+</html>
