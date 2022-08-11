@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animaciones Simples</title>
+</head>
+
+<body>
+    <canvas width="600" height="400"></canvas>
+    <script>
+        const tagCanva = document.querySelector("canvas")
+        const paintBrush = tagCanva.getContext("2d")
+        let x = 20
+
+        function cleanCanvas() {
+            paintBrush.clearRect(0, 0, tagCanva.width, tagCanva.height);
+            paintBrush.fillStyle = "lightgrey"
+            paintBrush.fillRect(0, 0, tagCanva.width, tagCanva.height)
+        }
+
+        function drawCircle(x, y, radio) {
+            paintBrush.fillStyle = "blue"
+            paintBrush.beginPath()
+            paintBrush.arc(x, y, radio, 0, 2 * Math.PI)
+            paintBrush.fill()
+        }
+
+        function moveCircle() {
+            if (x < 580) {
+                cleanCanvas()
+                drawCircle(x, 40, 20)
+                x++
+            } else {
+                x = 0
+            }
+        }
+
+        cleanCanvas()
+        // drawCircle(20, 20, 10)
+        setInterval(moveCircle, 10)
+
+    </script>
+</body>
+
+</html>
