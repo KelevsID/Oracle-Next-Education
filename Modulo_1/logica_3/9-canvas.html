@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animaciones Simples</title>
+</head>
+
+<body>
+    <canvas width="600" height="400"></canvas>
+    <script>
+        const tagCanva = document.querySelector("canvas")
+        const paintBrush = tagCanva.getContext("2d")
+        let radius = 10
+
+        function cleanCanvas() {
+            paintBrush.clearRect(0, 0, tagCanva.width, tagCanva.height);
+            paintBrush.fillStyle = "lightgrey"
+            paintBrush.fillRect(0, 0, tagCanva.width, tagCanva.height)
+        }
+
+        function drawCircle(x, y, radius, color) {
+            paintBrush.fillStyle = color
+            paintBrush.beginPath()
+            paintBrush.arc(x, y, radius, 0, 2 * Math.PI)
+            paintBrush.fill()
+        }
+
+        function random(min, max) {
+            let result = Math.floor(Math.random() * (max - min + 1)) + min;
+            return result;
+        }
+
+        function drawTargetShooting(x, y) {
+            drawCircle(x, y, radius + 20, "red")
+            drawCircle(x, y, radius + 13, "white")
+            drawCircle(x, y, radius, "red")
+        }
+
+        function randomTarget() {
+            cleanCanvas()
+            posX = random(30, tagCanva.width - 30)
+            posY = random(30, tagCanva.height - 30)
+            drawTargetShooting(posX, posY)
+        }
+
+        cleanCanvas()
+        setInterval(randomTarget, 850)
+
+        function clickShootting(event) {
+            let x = event.offsetX
+            let y = event.offsetY
+            if (x < posX + radius &&
+                x > posX - radius &&
+                y < posY + radius &&
+                y > posY - radius) {
+                alert("Tiro certero")
+            }
+        }
+
+        tagCanva.onclick = clickShootting;
+
+    </script>
+</body>
+
+</html>
