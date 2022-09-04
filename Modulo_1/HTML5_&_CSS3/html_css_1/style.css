@@ -1,8 +1,80 @@
-h1,
-p {
+body {
+    background-color: #cccccc;
+    margin: 0;
+    padding: 0;
+    border: 0px;
+}
+
+.titulo-principal {
+    padding-left: 1.1em;
+    font-size: 2em;
+    font-weight: bold;
+    color: rgb(207, 207, 207);
+    padding-top: 2.6em;
+    padding-left: 2.4em;
+    margin: 0;
+}
+
+#banner{
+	background:url(img/banner.webp) no-repeat center center;
+	background-size:cover;
+	height:350px;
+	width: 100%;
+}
+
+.principal {
+    background-color: #cdcdcd;
+    padding: 1em;
+}
+
+.titulo-centralizado
+{
+    margin-top: 7em;
     text-align: center;
 }
 
-#p-font-size {
+.titulo-centralizado2, p {
+    text-align: center;
+}
+
+p{
+    margin-left: 31em
+}
+
+#mision {
     font-size: 1.25em;
+}
+
+em strong {
+    color: #6e1432;
+}
+
+.diferenciales {
+    background-color: #ffffff;
+    background-image: url(img/diferenciales.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 450px;
+    height: 300px;
+    padding: 1.3em;
+    float: left;
+    color: whitesmoke;
+}
+
+ul {
+    display: inline-block;
+    vertical-align: top;
+    width: 70%;
+    margin-top: 3%;
+    margin-right: 15%;
+}
+
+.items > li{
+    font-style: italic;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.imgDiferenciales {
+    width: 35%;
 }

@@ -1,0 +1,165 @@
+header {
+    background-color: #cccccc;
+    padding: 20px 0;
+}
+
+.caja {
+    width: 69%;
+    position: relative;
+    margin: 0 auto;
+}
+
+nav {
+    position: absolute;
+    top: 110px;
+    right: 0;
+}
+
+nav li {
+    display: inline;
+    margin: 0 0 0 15px;
+}
+
+nav a {
+    text-transform: uppercase;
+    color: #000000;
+    font-weight: bold;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #c78c19;
+    text-decoration: underline;
+    transition: 0.25s;
+}
+
+main {
+    width: 69%;
+    margin: 0 auto;
+    padding: 50px 0 40px 0;
+}
+
+/*
+Aquí es producto
+*/
+
+.productos li {
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+    vertical-align: top;
+    margin: 0 1.5%;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    border: solid 2px #000000;
+    border-radius: 20px;
+    /* box-shadow: -2px 1px 25px blue; */
+}
+
+.productos li:hover {
+    border: 2px solid #c78c19;
+    transition: 0.35s;
+}
+
+.productos li:active {
+    border-color: #088c19;
+    transition: 0.25s;
+}
+
+.productos h2 {
+    font-size: 1.9em;
+    font-weight: bold;
+}
+
+.productos li:hover h2 {
+    font-size: 2em;
+}
+
+.producto-descripcion {
+    font-size: 1.1em;
+}
+
+.producto-precio {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 10px;
+    color: blue;
+}
+
+/*
+Aquí es contacto
+*/
+form {
+    margin: 10px 0;
+}
+
+form label, form legend {
+    display: block;
+    font-size: 1.2em;
+    margin: 0 0 10px 0;
+}
+
+.input-padron{
+    display: block;
+    font-size: 1.05em;
+    width: 50%;
+    margin: 0 0 20px 0;
+    padding: 10px 20px 5px 10px;
+    resize: none;
+}
+
+
+::placeholder {
+    color: #5e5eca;
+}
+
+.checkbox{
+    margin: 15px 0 20px 0;
+}
+
+.enviar{
+    width: 40%;
+    padding: 15px 0;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #fff;
+    background-color: #ee9e0a;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.enviar:hover {
+    background-color: #c0730e;
+    transform: scale(1.02);
+    transition: 0.65s all;
+}
+
+table{
+    margin: 40px 40px;
+}
+thead { 
+    background-color: #555555;
+    color: #cccccc;
+    font-weight: bold;
+}
+
+td, th{
+    border: 1px solid #000000;
+    padding: 8px 15px;
+}
+/*
+Aquí es footer
+*/
+footer {
+    background: url("imagenes/bg.jpg");
+    text-align: center;
+    padding: 2.5em;
+}
+
+.copyright {
+    color: #ffffff;
+    font-size: 0.8em;
+    margin: 1.5em;
+}
