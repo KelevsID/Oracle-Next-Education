@@ -48,3 +48,27 @@
     /* display: flex; */
     width: 23%;
 }
+
+.videoSobre .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.videoSobre-sobre {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+
+}
+
+.videoSobre-video {
+    /* flex-grow: 2; 
+	flex-shrink: 2; */
+    width: 52%;
+
+}
+
+.videoSobre-sobre-list {
+    flex-grow: 1;
+}
