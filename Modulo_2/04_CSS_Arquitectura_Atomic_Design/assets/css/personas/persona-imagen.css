@@ -1,11 +1,11 @@
 .persona__imagen {
-    height: 300px;
-    width: 300px;
-    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
     border-radius: 50%;
     /* border: solid 5px #8d0606; */
+    height: 300px;
+    width: 300px;
 }
 
 .persona__imagen--roberta {
@@ -13,8 +13,8 @@
 }
 
 .persona__imagen--roberta:hover {
-    filter: blur(1.5px);
     cursor: pointer;
+    filter: blur(1.5px);
 }
 
 .persona__imagen--marcela {
@@ -22,8 +22,8 @@
 }
 
 .persona__imagen--marcela:hover {
-    filter: blur(1.5px);
     cursor: pointer;
+    filter: blur(1.5px);
 }
 
 .persona__imagen--andrea {
@@ -31,6 +31,6 @@
 }
 
 .persona__imagen--andrea:hover {
-    filter: blur(1.5px);
     cursor: pointer;
+    filter: blur(1.5px);
 }

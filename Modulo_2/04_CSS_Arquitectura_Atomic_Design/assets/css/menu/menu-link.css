@@ -11,7 +11,7 @@
 }
 
 .menu__link:hover {
-    padding-bottom: .2rem;
     border-bottom: solid 1px #808080;
+    padding-bottom: .2rem;
     /* text-decoration: underline; */
 }
