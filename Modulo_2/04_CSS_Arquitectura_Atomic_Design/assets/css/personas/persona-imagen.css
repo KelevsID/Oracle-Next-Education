@@ -1,0 +1,36 @@
+.persona__imagen {
+    height: 300px;
+    width: 300px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    /* border: solid 5px #8d0606; */
+}
+
+.persona__imagen--roberta {
+    background-image: url('../../img/personas/roberta.jpg');
+}
+
+.persona__imagen--roberta:hover {
+    filter: blur(1.5px);
+    cursor: pointer;
+}
+
+.persona__imagen--marcela {
+    background-image: url('../../img/personas/marcela.jpg');
+}
+
+.persona__imagen--marcela:hover {
+    filter: blur(1.5px);
+    cursor: pointer;
+}
+
+.persona__imagen--andrea {
+    background-image: url('../../img/personas/andrea.jpg');
+}
+
+.persona__imagen--andrea:hover {
+    filter: blur(1.5px);
+    cursor: pointer;
+}
