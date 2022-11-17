@@ -21,10 +21,10 @@ const addTask = (evento) => {
     }
     
     const taskList = JSON.parse(localStorage.getItem('task')) || [];
-    taskList.push(taskObj)
-    localStorage.setItem('task', JSON.stringify(taskList))
+    taskList.push(taskObj);
+    localStorage.setItem('task', JSON.stringify(taskList));
 
-    const task = createTask(taskObj)
+    const task = createTask(taskObj);
     list.appendChild(task);
 }
 
@@ -48,4 +48,4 @@ const createTask = ({value, dateFormat}) => {
     return task;
 };
 
-export default addTask
+export default addTask;
