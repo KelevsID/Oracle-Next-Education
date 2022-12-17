@@ -1,0 +1,13 @@
+{
+  "name": "cuentasbancopopular",
+  "version": "1.0.0",
+  "description": "Gestión de Cuentas Corrientes del Banco Popular Curso Alura",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "KelevsID",
+  "license": "ISC"
+}
