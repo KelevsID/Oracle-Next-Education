@@ -36,10 +36,10 @@ console.log("Cantidad de cuentas ahorro ",CuentaAhorro.cantidadCuentas)
 console.log("total cuentas", Cuenta.cantidadCuentas)
 */
 
-const empleado1 = new Empleado("Juan Perez", "1201", 10000)
-const empleado2 = new Gerente("Juan Perez", "1201", 20000)
-const empleado3 = new Director("Juan Perez", "1201", 15000)
+const empleado = new Empleado("Juan Perez", "1201", 10000)
+const gerente = new Gerente("Pedro Rivas", "2211", 12000)
+const director = new Director("Elena Moreno", "3322", 15000)
 
-console.log(empleado1.verBonificacion(), empleado2.verBonificacion(), empleado3.verBonificacion())
+console.log(empleado.verBonificacion(), gerente.verBonificacion(), director.verBonificacion())
 
 
