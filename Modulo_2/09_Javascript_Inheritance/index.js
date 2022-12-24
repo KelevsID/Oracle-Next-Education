@@ -4,10 +4,15 @@ import { Cuenta } from './Cuentas/cuenta.js';
 import { CuentaCorriente } from './Cuentas/cuentaCorriente.js';
 import { CuentaAhorro } from './Cuentas/cuentaAhorro.js';
 import { CuentaNomina } from './Cuentas/cuentaNomina.js';
+import { Gerente } from './Empleados/gerente.js';
+import { Director } from './Empleados/director.js';
+import { Empleado } from './Empleados/empleado.js';
 
 
 const cliente1 = new Cliente('Leonardo', '13804050', '123224');
 const cliente2 = new Cliente('María', '16979808', '8989');
+
+/*
 
 const cuentaDeLeonardo = new CuentaCorriente(cliente1, '1', '001');
 const cuentaDeMaria = new CuentaCorriente(cliente2, '2', '002');
@@ -29,4 +34,12 @@ console.log(cuentaNominaLeonardo.verSaldo())
 console.log("Cantidad de cuentas corriente ",CuentaCorriente.cantidadCuentas)
 console.log("Cantidad de cuentas ahorro ",CuentaAhorro.cantidadCuentas)
 console.log("total cuentas", Cuenta.cantidadCuentas)
+*/
+
+const empleado1 = new Empleado("Juan Perez", "1201", 10000)
+const empleado2 = new Gerente("Juan Perez", "1201", 20000)
+const empleado3 = new Director("Juan Perez", "1201", 15000)
+
+console.log(empleado1.verBonificacion(), empleado2.verBonificacion(), empleado3.verBonificacion())
+
 
