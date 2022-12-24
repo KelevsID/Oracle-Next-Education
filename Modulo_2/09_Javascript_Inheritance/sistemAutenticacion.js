@@ -1,7 +1,5 @@
 export class sistemAutenticacion {
-    login(empleado, clave) {
-        if (empleado.clave == clave)
-            return true;
-        return false;
+    static login(usuario, clave) {
+        return usuario.clave === clave;
     }
 };
