@@ -15,8 +15,12 @@ export class Empleado {
         this.#clave = clave
     }
 
-    get clave(){
-        return this.#clave
+    // get clave(){
+    //     return this.#clave
+    // }    // => en lugar de tener un getter llamado clave, tenemos un método llamado autenticable, 
+            // que va a recibir una clave y que nos va a retornar si esa clave es igual a lo que tenemos almacenado. 
+    autenticable(clave) {
+        return this.#clave === clave
     }
 
     verBonificacion() {

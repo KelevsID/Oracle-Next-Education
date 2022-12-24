@@ -15,7 +15,12 @@ export class Cliente {
         this.#clave = clave
     }
 
-    get clave(){
-        return this.#clave
-    }
+    // autenticable(clave) {
+    //     return this.#clave === clave
+    // }   
+    /*
+        Vamos a comentar acá, y ejecuto, me aparece el error. ¿Cómo proteger que una implementación 
+        de polimorfismo no nos dé un error de esa forma? Entonces eso debemos hacerlo en el punto donde 
+        hacemos la llamada de la interfaz. 
+    */
 }
