@@ -3,6 +3,7 @@ export class Cliente {
     dniCliente;
     rutCliente;
     #clave;
+    // autenticable;    // => Como propiedad
 
     constructor(nombreCliente, dniCliente, rutCliente) {
         this.nombreCliente = nombreCliente;
@@ -15,9 +16,9 @@ export class Cliente {
         this.#clave = clave
     }
 
-    // autenticable(clave) {
-    //     return this.#clave === clave
-    // }   
+    autenticable(clave) {    // => Como metódo
+        return this.#clave === clave
+    }   
     /*
         Vamos a comentar acá, y ejecuto, me aparece el error. ¿Cómo proteger que una implementación 
         de polimorfismo no nos dé un error de esa forma? Entonces eso debemos hacerlo en el punto donde 
